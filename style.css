@@ -1,0 +1,503 @@
+/* ====================
+   RESET & BASE STYLES
+   ==================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0A0A0A;
+    color: #FFF;
+    line-height: 1.5;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* ============
+     NAVBAR
+     ============ */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #C5A358;
+  }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #FFF;
+    cursor: pointer;
+  }
+  .nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  .nav-menu a {
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  .nav-menu a:hover,
+  .nav-menu .active {
+    color: #C5A358;
+  }
+  
+  /* ============
+     HERO SECTION
+     ============ */
+  .hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../images/hero.jpg') center/cover no-repeat;
+    opacity: 0.3;
+  }
+  .hero-text {
+    position: relative;
+    max-width: 700px;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .hero-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #DDD;
+  }
+  
+  /* BUTTONS */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: 2px solid #C5A358;
+    color: #C5A358;
+    transition: all 0.3s;
+  }
+  .btn:hover {
+    background: #C5A358;
+    color: #000;
+  }
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #C5A358;
+    color: #C5A358;
+    transition: all 0.3s;
+  }
+  .btn-secondary:hover {
+    background: #C5A358;
+    color: #000;
+  }
+  
+  /* ================
+     ABOUT PREVIEW
+     ================ */
+  .about-preview {
+    padding: 4rem 2rem;
+    background: #121212;
+    text-align: center;
+  }
+  .about-preview h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #C5A358;
+  }
+  .about-preview p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    color: #DDD;
+  }
+  
+  /* ===================
+     NEW ARRIVALS SECTION
+     =================== */
+  .new-arrivals {
+    padding: 4rem 2rem;
+    background: #121212;
+    text-align: center;
+  }
+  .new-arrivals h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #C5A358;
+  }
+  .new-arrivals .grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-bottom: 2rem;
+  }
+  .new-arrivals .card {
+    background: #1A1A1A;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  .new-arrivals .card:hover {
+    transform: translateY(-5px);
+  }
+  .new-arrivals .card img {
+    width: 100%;
+    border-radius: 6px;
+  }
+  .new-arrivals .card p {
+    margin-top: 0.75rem;
+    font-family: 'Playfair Display', serif;
+    color: #FFF;
+  }
+  
+  /* ====================
+     PRODUCTS PAGE STYLES
+     ==================== */
+  .products-page {
+    padding: 4rem 2rem;
+    background: #0A0A0A;
+  }
+  .products-page h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #C5A358;
+  }
+  .products-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-bottom: 3rem;
+  }
+  .product-card {
+    background: #121212;
+    border: 1px solid #222;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+  }
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  }
+  .product-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .product-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #FFF;
+  }
+  .product-card .price {
+    color: #C5A358;
+    margin-bottom: 0.5rem;
+  }
+  .product-card p.desc {
+    margin: 0 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: #AAA;
+  }
+  .product-card .btn-small {
+    margin-bottom: 1rem;
+  }
+  
+  /* ==============
+     TRAILER SECTION
+     ============== */
+  .trailer {
+    text-align: center;
+    padding: 2rem;
+    background: #121212;
+    border-top: 1px solid #222;
+  }
+  .trailer h2 {
+    font-family: 'Playfair Display', serif;
+    color: #C5A358;
+    margin-bottom: 1rem;
+  }
+  .trailer video {
+    width: 100%;
+    max-width: 640px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+  
+  /* =====================
+     PRODUCT DETAIL PAGE
+     ===================== */
+  .product-detail-page {
+    padding: 4rem 2rem;
+    background: #0A0A0A;
+  }
+  .detail-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .detail-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .detail-info h1 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+    color: #FFF;
+  }
+  .detail-info .price {
+    color: #C5A358;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .detail-info p.desc {
+    margin-bottom: 1.5rem;
+    color: #DDD;
+  }
+  .sizes {
+    margin-bottom: 1rem;
+  }
+  .sizes button {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #FFF;
+    background: transparent;
+    color: #FFF;
+    cursor: pointer;
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .sizes button:hover,
+  .sizes .active {
+    border-color: #C5A358;
+    color: #C5A358;
+  }
+  .quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .quantity input {
+    width: 60px;
+    text-align: center;
+    padding: 0.25rem;
+    border: 1px solid #333;
+    background: #121212;
+    color: #FFF;
+    border-radius: 4px;
+  }
+  .quantity button {
+    padding: 0.25rem 0.75rem;
+    background: #222;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* ==============
+   EVENT PAGE FORM
+   ============== */
+.event-page {
+  max-width: 480px;
+  margin: 2rem auto;
+  background: #121212;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+}
+.event-page h1 {
+  color: #C5A358;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Label umum */
+.event-page label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #FFF;
+  font-weight: 500;
+}
+
+/* Input text, email, date */
+.event-page input[type="text"],
+.event-page input[type="email"],
+.event-page input[type="date"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  background: #000;
+  border: 1px solid #333;
+  color: #FFF;
+  border-radius: 4px;
+}
+
+/* Fieldset (gender) */
+.event-page fieldset {
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #FFF;
+}
+.event-page legend {
+  padding: 0 0.5rem;
+  font-weight: 500;
+}
+.event-page .gender-options {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+.event-page .gender-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+.event-page .gender-options input {
+  width: auto;
+  margin: 0;
+}
+
+/* Checkbox terms */
+.event-page .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.event-page .checkbox input {
+  width: auto;
+  margin: 0;
+}
+
+/* Submit button */
+.event-page .btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #C5A358;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.event-page .btn:hover {
+  background: #e0ad3c;
+}
+
+  
+  /* ==============
+     ABOUT US PAGE
+     ============== */
+  .about-page {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .about-page h1 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    color: #C5A358;
+  }
+  .about-page p {
+    margin-bottom: 1rem;
+    color: #DDD;
+  }
+  .about-page img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+  .vision-philosophy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  .vision-philosophy h2 {
+    color: #C5A358;
+    margin-bottom: 0.5rem;
+  }
+  .vision-philosophy p {
+    color: #DDD;
+  }
+  .testimonials {
+    background: #121212;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .testimonials h2 {
+    color: #C5A358;
+    margin-bottom: 1rem;
+  }
+  .testimonials p {
+    color: #DDD;
+  }
+  
+  /* =======
+     FOOTER
+     ======= */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: #000;
+    color: #AAA;
+  }
+  
+  /* ==============
+     RESPONSIVE RULES
+     ============== */
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: block;
+    }
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #000;
+    }
+    .nav-menu.open {
+      display: block;
+    }
+    .nav-menu ul {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+    .detail-grid,
+    .products-grid,
+    .vision-philosophy {
+      grid-template-columns: 1fr;
+    }
+  }
+  

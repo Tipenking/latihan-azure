@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>CW — Product Detail</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">CW</div>
+    <button class="nav-toggle">☰</button>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html" class="active">Product</a></li>
+        <li><a href="event.html">Event</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PRODUCT DETAIL -->
+  <main class="product-detail-page">
+    <div class="detail-grid">
+      <!-- Gambar besar produk -->
+      <div class="detail-image">
+        <img src="images/product1.jpg" alt="Classic Trench Coat">
+      </div>
+      <!-- Informasi produk -->
+      <div class="detail-info">
+        <h1>Classic Trench Coat</h1>
+        <p class="price">IDR 1.800.000</p>
+
+        <p class="desc">A timeless trench coat crafted from premium cotton blend, water-resistant finish, perfect for any season.</p>
+
+        <!-- Quantity -->
+        <label for="qty">Quantity:</label>
+        <div class="quantity">
+          <button id="dec">–</button>
+          <input type="number" id="qty" value="1" min="1">
+          <button id="inc">+</button>
+        </div>
+
+        <!-- Buttons -->
+        <button class="btn">Add to Cart</button>
+        <button class="btn-secondary">Order Now</button>
+
+        <!-- Deskripsi panjang -->
+        <section class="description">
+          <h2>Description</h2>
+          <p>
+            Exceptional craftsmanship meets modern design in our Classic Trench Coat. 
+            Fully lined with satin interior, adjustable belt, and interior pockets 
+            for style and functionality. Ideal for both casual and formal wear.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 CW Luxury Fashion</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

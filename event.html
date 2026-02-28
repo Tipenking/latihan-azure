@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CW — Event Registration</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">CW</div>
+    <button class="nav-toggle">☰</button>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="event.html" class="active">Event</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="event-page">
+    <h1>Model Registration</h1>
+    <form id="eventForm">
+      <!-- 1. Full Name -->
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" placeholder="Your full name" required>
+
+      <!-- 2. Email Address -->
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="name@example.com" required>
+
+      <!-- 3. Birth Date -->
+      <label for="birthDate">Birth Date</label>
+      <input type="date" id="birthDate" required>
+
+      <!-- 4. Gender -->
+      <fieldset>
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+      </fieldset>
+
+      <!-- 5. Terms & Conditions -->
+      <label class="checkbox">
+        <input type="checkbox" id="terms"> I agree to the terms and conditions
+      </label>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 CW Luxury Fashion</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
